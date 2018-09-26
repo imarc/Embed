@@ -154,8 +154,6 @@ class CurlDispatcher implements DispatcherInterface
 
         $result = $curl->getResult();
 
-        curl_close($connection);
-
         return $this->responses[] = new Response(
             $url,
             Url::create($result['url']),
